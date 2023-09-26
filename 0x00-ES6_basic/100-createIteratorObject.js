@@ -1,10 +1,14 @@
-export default function createIteratorObject(report){
-    const emp = [];
-
-    for (const dep of Objects.keys(report.allEmployees)){
-        for (const empl of report.allEmployees[dep]){
-            emp.push(empl);
+export default function createIteratorObject(report) {
+    // Create a generator function to yield each employee
+    function* employeeGenerator() {
+      for (const dep of Object.keys(report.allEmployees)) {
+        for (const empl of report.allEmployees[dep]) {
+          yield empl;
         }
+      }
     }
-    return emp;
-}
+  
+    // Return an iterator
+    return employeeGenerator();
+  }
+  
