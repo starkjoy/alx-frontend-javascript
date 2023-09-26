@@ -1,10 +1,12 @@
 export default function appendToEachArrayValue(array, appendString) {
-    /* eslint-disable no-loop-func */
-    for (const value of array) {
-      array[array.indexOf(value)] = appendString + value;
-    }
-    /* eslint-enable no-loop-func */
+    const modifiedArray = [];
   
-    return array;
+    for (const idx in array) {
+      if (array.hasOwnProperty(idx)) {
+        modifiedArray.push(appendString + array[idx]);
+      }
+    }
+  
+    return modifiedArray;
   }
   
