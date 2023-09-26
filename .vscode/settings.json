@@ -1,0 +1,6 @@
+{
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.onIgnoredFiles": "warn"
+}
