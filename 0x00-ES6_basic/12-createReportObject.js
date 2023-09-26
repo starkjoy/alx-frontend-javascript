@@ -1,20 +1,6 @@
-export default function creationReportObject(employeesList) {
-    const groupedEmployees = {};
-
-    for (const department in employeesList){
-        const employees = employeesList[department];
-
-        groupedEmployees[department] = employees;
-    }
-
-    const countDepartments = function () {
-        return Objects.keys(groupedEmployees).length;
-    };
-
-    const report = {
-        allEmployees: groupedEmployees,
-        getNumberOfDepartments: countDepartments,
-    };
-
-    return report;
-}
+export default function createReportObject(employeesList) {
+    return {
+        allEmployees: {...employeesList,}, 
+        getNumberOfDepartments(empList) {return Object.keys(empList).length;},
+};
+  }
