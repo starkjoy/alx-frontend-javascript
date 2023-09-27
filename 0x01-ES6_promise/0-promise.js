@@ -1,1 +1,4 @@
-const something = "Joy";
+function getResponseFromAPI() {
+    return new Promise((resolve, reject) => {});
+  }
+  
