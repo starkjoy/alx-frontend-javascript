@@ -11,8 +11,5 @@ export default class Building {
     get sqft() {
       return this._sqft;
     }
-    
-    evacuationWarningMessage() {
-        // Subclasses should provide their implementation
-      }
   }
+  
