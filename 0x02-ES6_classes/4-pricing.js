@@ -38,5 +38,6 @@ export default class Pricing {
     if (typeof amount === 'number' && typeof conversionRate === 'number') {
       return (amount * conversionRate);
     }
+    throw new TypeError('Check amount or conversionRate');
   }
 }
