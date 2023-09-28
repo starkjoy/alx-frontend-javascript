@@ -1,7 +1,7 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
     if (typeof name !== 'string' || typeof length !== 'number' || !Array.isArray(students) || !students.every((student) => typeof student === 'string')) {
-      throw new Error('Invalid attribute types');
+      throw new TypeError('Invalid attribute types');
     }
     this._name = name;
     this._length = length;
@@ -24,7 +24,7 @@ export default class HolbertonCourse {
     if (typeof name === 'string') {
       this._name = name;
     } else {
-      throw new Error('Name must be a string');
+      throw new TypeError('Name must be a string');
     }
   }
 
@@ -32,7 +32,7 @@ export default class HolbertonCourse {
     if (typeof length === 'number') {
       this._length = length;
     } else {
-      throw new Error('Length must be a number');
+      throw new TypeError('Length must be a number');
     }
   }
 
@@ -40,7 +40,7 @@ export default class HolbertonCourse {
     if (Array.isArray(students) && students.every((student) => typeof student === 'string')) {
       this._students = students;
     } else {
-      throw new Error('Students must be an array of strings');
+      throw new TypeError('Students must be an array of strings');
     }
   }
 }
