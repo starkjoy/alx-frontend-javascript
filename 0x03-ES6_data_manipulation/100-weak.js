@@ -14,6 +14,6 @@ export default function queryAPI(endpoint) {
 
   // Check if the count is >= 5, and throw an error if so
   if (count >= 5) {
-    throw new Error(`Endpoint load is high`);
+    throw new Error('Endpoint load is high');
   }
 }
