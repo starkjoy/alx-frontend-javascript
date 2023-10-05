@@ -1,6 +1,6 @@
 namespace Subjects {
 	export class Subject {
-		private teacher: Teacher | undefined;
+		teacher: Teacher | undefined;
 
 		constructor(teacher: Teacher | undefined) {
 			this.teacher = teacher;
